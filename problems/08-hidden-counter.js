@@ -1,6 +1,6 @@
 /***********************************************************************
 Write a function named `hiddenCounter()`. This function will do two things - first
-it will define a count variable, then it will return a function. 
+it will define a count variable, then it will return a function.
 When invoked the function returned by hiddenCounter will increment the counter by 1.
 
 Look below to see how this function is invoked:
@@ -12,10 +12,19 @@ hidden1(); // returns 2
 let hidden2 = hiddenCounter(); // returns a function
 hidden2(); // returns 1
 
+Plan
+Creating a function that defines a count variable then returns a function
+that iterates the count variable
+
 
 ***********************************************************************/
 
-// your code here!
+const hiddenCounter = () => {
+  let counter = 0
+
+  return () => ++counter
+
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
