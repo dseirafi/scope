@@ -1,12 +1,15 @@
 /***********************************************************************
 Write a function named: countDownTimer(n). This function will represent a count
-down of days till the New Year. The countDownTimer function will 
+down of days till the New Year. The countDownTimer function will
 take in a number argument (n) the first time it is called and if that
 number is greater than 0 the countDownTimer will return a function.
 
-The function returned by countDownTimer can then be invoked n times before it 
-returns a string of "Happy New Year!". Look closely at how this function is 
+The function returned by countDownTimer can then be invoked n times before it
+returns a string of "Happy New Year!". Look closely at how this function is
 invoked below:
+
+
+
 
 Example 1:
   console.log(countDownTimer(0)); // prints "Happy New Year!"
@@ -26,9 +29,31 @@ Example 4:
   console.log(threeDays()); // returns a function
   console.log(threeDays()); // prints "Happy New Year!"
 
+Plan
+Create a function that counts down
+If n = 0 then print "Happy New Year"
+If n > 0 then we return the function and continue countdown
+
+
 ***********************************************************************/
 
-// your code here
+const countDownTimer = n => {
+  if (n === 0) {
+    return "Happy New Year!"
+  }
+  return countdown = () => {
+    n--
+    if (n === 0) {
+      return "Happy New Year!"
+
+    } else {
+      return countdown
+
+    }
+
+  }
+
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
