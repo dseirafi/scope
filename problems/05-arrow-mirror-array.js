@@ -4,14 +4,16 @@ argument and returns a new array "mirrored" as shown in the examples.
 
 Write this function using an arrow function!
 
+PLAN
+-Create a function that takes in an array and returns a new array
+
 Examples:
 
 arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
 
-// your code here
-
+const arrowMirrorArray = (array) => [...array, ...array.reverse()]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
