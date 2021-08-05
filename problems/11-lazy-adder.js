@@ -17,13 +17,24 @@ let func2 = func1(20);
 let total = func2(3);
 console.log(total); // prints 33
 
+PLAN
+-Create a function named lazyAdder then we will return another function with secondNum
+and return another function inside called thirdNum, which finally returns a number.
+
 AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Explain, but don't code, how you would turn your solution into a one-line
   fat-arrow function
 ***********************************************************************/
 
-// your code here
+const lazyAdder = (firstNum) => {
+  return function (secondNum) {
+    return function (thirdNum){
+      return firstNum + secondNum + thirdNum
+    }
+  }
+}
 
+const lazyAdder = firstNum => secondNum => thirdNum => firstNum + secondNum + thirdNum
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
